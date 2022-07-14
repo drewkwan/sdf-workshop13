@@ -15,18 +15,18 @@ public class Contact implements Serializable {
     private String id;
 
     public Contact() {
-        this.id = generateID(0);
+        this.id = generateID(8);
     }
 
     public Contact(String name, String email, int phoneNumber) {
-        this.id = generateID(0);
+        this.id = generateID(8);
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
     public Contact(String id, String name, String email, int phoneNumber) {
-        this.id = generateID(0);
+        this.id = id;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;

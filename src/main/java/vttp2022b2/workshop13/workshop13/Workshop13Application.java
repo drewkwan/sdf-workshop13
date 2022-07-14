@@ -1,6 +1,6 @@
 package vttp2022b2.workshop13.workshop13;
 
-import vttp2022b2.workshop13.workshop13.util.IOUtil.*;
+import static vttp2022b2.workshop13.workshop13.util.IOUtil.*;
 
 import java.util.List;
 
@@ -16,13 +16,11 @@ public class Workshop13Application {
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(Workshop13Application.class);
-
-		SpringApplication.run(Workshop13Application.class, args);
 		DefaultApplicationArguments appArgs = new DefaultApplicationArguments(args);
 		List<String> opsVal = appArgs.getOptionValues("dataDir");
 		System.out.println(opsVal);
 		if(opsVal != null) {
-			logger.info("data dir > ", ((String) opsVal.get(0)));
+			logger.info("", (String) opsVal.get(0));
 			createDir((String) opsVal.get(0));
 		} else {
 			logger.warn("No data directory was provided");

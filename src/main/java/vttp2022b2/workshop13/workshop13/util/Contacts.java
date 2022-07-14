@@ -9,11 +9,12 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.ApplicationArguments;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 
 import vttp2022b2.workshop13.workshop13.model.Contact;
 
-@Components("contacts")
+@Component("contacts")
 public class Contacts {
     private static final Logger logger = LoggerFactory.getLogger(Contacts.class);
 
@@ -21,7 +22,7 @@ public class Contacts {
         String dataFileName = ctc.getId();
         Set<String> opsNames = appArgs.getOptionNames();
         String[] optNamesArr = opsNames.toArray(new String[opsNames.size()]);
-        List <String> optValues = appArgs.getOptionValues(optNamesArr[]);
+        List<String> optValues = appArgs.getOptionValues(optNamesArr[0]);
         String[] optValuesArr = optValues.toArray(new String[optValues.size()]);
 
         PrintWriter printWriter = null;
