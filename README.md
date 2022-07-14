@@ -6,7 +6,9 @@ Linux/Macos
 '''
 mvn spring-boot:run -Dspring-boot:run.arguments=--dataDir=/opt/tmp/data
 '''
-mv spring-boot: run -Dspring-boot:run.arguments=--dataDir=C:/data
+Windows
+'''
+mvn spring-boot: run -Dspring-boot:run.arguments=--dataDir=C:/data
 '''
 * Incorporate test started dependencies
 '''

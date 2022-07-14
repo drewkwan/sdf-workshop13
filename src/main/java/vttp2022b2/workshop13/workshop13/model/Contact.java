@@ -3,6 +3,9 @@ package vttp2022b2.workshop13.workshop13.model;
 import java.io.Serializable;
 import java.util.Random;
 
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.ui.Model;
+
 public class Contact implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -63,6 +66,9 @@ public class Contact implements Serializable {
     }
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void saveContact(Contact contact, Model model, ApplicationArguments appArgs) {
     }
 
 }
